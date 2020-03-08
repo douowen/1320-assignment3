@@ -1,0 +1,27 @@
+{
+  "name": "assignment3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "npx serve .",
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "BrownCS1320",
+    "Assignment3",
+    "TwitterFeed",
+    "Vue"
+  ],
+  "author": "Chong Wang",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-vue": "^6.2.1",
+    "stylelint": "^13.2.0",
+    "stylelint-config-standard": "^20.0.0"
+  },
+  "dependencies": {
+    "moment": "^2.24.0"
+  }
+}

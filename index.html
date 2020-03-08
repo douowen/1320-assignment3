@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Twitter Feeds</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	</head>
+	<body>
+		<div id="app" class="content-wrapper">
+			<nav class="navbar fixed-top header" role="navigation">
+				<!--Skip link for accessability use-->
+				<div class="navs-content">
+					<div class="nav-links">
+						<ul class="nav nav-left">
+							<li class="nav-item nav-li">
+								<a class="nav-link header-link" href="#"><span>Twitter</span></a>
+							</li>
+							<li class="nav-item nav-li">
+								<router-link to="/tic-tac-toe" class="nav-link header-link"><span>Tic-Tac-Toe</span></router-link>
+							</li>
+							<li class="nav-item nav-li">
+								<router-link to="/madlibs" class="nav-link header-link"><span>Madlibs</span></router-link>
+							</li>
+						</ul>
+					</div>
+					<div class="nav-overlay text-center">
+						<img class="twitter-logo" src="./img/twitter-logo.png" alt="twitter icon logo">
+					</div>
+				</div>
+				<a id="jump-link" class = "sr-only sr-only-focusable" href="#main-content">Jump to Content</a>
+			</nav>
+			<div id="main-content" class="content-middle" role="main">
+				<text-component v-on:submit-tweet="submitTweet"></text-component>
+				<search-component @on-input="onInput"></search-component>
+				<div id="tweets-container">
+					<tweet-component :tweet-array="sortedTweets"></tweet-component>
+				</div>
+			</div>
+			<router-view></router-view>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+		<script src="./index.js"></script>
+	</body>
+</html>
